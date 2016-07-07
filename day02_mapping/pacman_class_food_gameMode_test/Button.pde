@@ -29,12 +29,12 @@ class Button {
       status = true;
       bcolor = #0E3236;
     } else status = false;
-    println("buttonStatus" + status + "hover" + mouseHover);
+    //println("buttonStatus" + status + "hover" + mouseHover);
   }
   void display() {
     fill(bcolor);
     noStroke();
-    textMode(SHAPE);
+   // textMode(SHAPE);
     textAlign(LEFT, TOP);
     rect(bx, by, bw, bh);
     fill(255);
