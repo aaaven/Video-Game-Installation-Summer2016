@@ -6,7 +6,7 @@ Pacman pac;
 Food foo;
 int fCount = 0;
 int saveTime;
-int totalTime = 10000;
+int totalTime = 3000;
 int fCnt = 3;
 
 int gameMode = 1;
@@ -54,27 +54,24 @@ void gameMode() {
     //println(fCount);
   }
 }
-
 void keyReleased() {
   pac.keyReleased();
 }
-
 void winGame() {
   background(255, 0, 0);
   //fill(0);
   text("Yeah, u win!!!!!!", width/2, height/2);
   restartButton();
 }
-
 void loseGame() {
-  background(0);
-  fill(255);
+  background(50);
+  fill(150);
   text("u SUCK!!!!!", width/2, height/2);
   restartButton();
 }
 
 void restartButton() {
-  Button Restart = new Button("Restart", 100, height -50, 60, 20);
+  Button Restart = new Button("Restart", 100, height -50, 20);
   Restart.run();
   if (Restart.status) {
     gameMode = 1;
