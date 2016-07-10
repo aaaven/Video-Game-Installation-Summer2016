@@ -2,6 +2,11 @@
  for Go Beyond Classics: Bring Video Game into Real World
  In class live coding
  */
+
+import controlP5.*;
+ControlP5 cp5;
+int c = color(100);
+
 int cherryCount = 0;
 int saveTime;
 int totalTime = 10000;
@@ -17,7 +22,9 @@ void setup() {
   cherry = new Cherry(random(20, width-20), random(20, height-20), 40);
   gameMode = 0;
   saveTime = millis();
-  println(width,height);
+  //println(width, height);
+  cp5 = new ControlP5( this );
+  cp5.addColorWheel("c", 250, 10, 200 ).setRGB(color(128, 0, 255));
 }
 
 void draw() { //gameMode;

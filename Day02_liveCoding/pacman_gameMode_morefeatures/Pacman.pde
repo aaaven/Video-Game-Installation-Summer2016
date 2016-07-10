@@ -1,8 +1,9 @@
 //--------pacman class-------------
 class Pacman {
-  float x, y, pacSize, initSize,initSpd;
+  float x, y, pacSize, initSize, initSpd;
   int direction = 0;
   float xPlus, yPlus, speed;
+  color pacColor = c;
   Pacman(float init_x, float init_y, float pacmanSize, float initSpeed) {
     x = init_x;
     y = init_y;
@@ -23,8 +24,10 @@ class Pacman {
 
   void display() {
     float angle = abs(sin(frameCount/6))*PI/6;
-    fill(#FFF640);
+    fill(pacColor);
     arc(x, y, pacSize, pacSize, direction* PI/2+angle, direction* PI/2+2*PI-angle);
+    //fill(0);
+    //ellipse(x+pacSize/4, y-pacSize/4, pacSize/6, pacSize/6);
   }
   void move() {
     x += xPlus;
@@ -55,7 +58,6 @@ class Pacman {
       }
       //--------direction ---------------
     }
-
   }
 
   void speedUp() {

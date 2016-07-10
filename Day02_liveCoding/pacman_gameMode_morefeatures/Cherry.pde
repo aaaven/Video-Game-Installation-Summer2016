@@ -21,6 +21,6 @@ class Cherry {
   }
   void check() {
     float dist = dist(x, y, pacman.x, pacman.y);
-    if (dist< pacman.pacSize/2) status = false;
+    if (dist< pacman.pacSize/2 + cSize/2) status = false;
   }
 }

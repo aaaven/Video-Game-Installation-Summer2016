@@ -1,5 +1,5 @@
 void startScreen() {//case 0
-  background(150);
+  background(0);
   Button startPlay = new Button("Start", width/4, 2*height/3, 20);
   startPlay.run();
   //click on startPlay to jump to gameMode1
@@ -14,10 +14,13 @@ void startScreen() {//case 0
   //pacman on startscreen
   Pacman startpac = new Pacman(width/2, 200, 300, 2);
   startpac.run();
-  //pacmans on startscreen
+  //draw something
+  
 }
 void gameMode1() { //case 1
+  cp5.hide();
   int passTime = millis()-saveTime;
+  pacman.pacColor= c;
   background(0);
   pacman.run();
   cherry.run();
